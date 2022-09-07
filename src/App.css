@@ -1,0 +1,90 @@
+body {
+  font-family: 'Josefin Sans';
+  background-color: #fff;
+overflow: 'hidden';
+}
+
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+
+::-webkit-scrollbar {
+  width: 0px;
+}
+
+.button:hover .home-icon{
+  color: white;
+}
+.nav{
+  background-color: rgb(255 255 255 / 73%);
+  z-index: 1;
+  max-width: 100%;
+}
+.boks{
+  position: relative;
+  z-index: 1;
+  max-width: 100%;
+}
+.boks::after{
+  content: '';
+  position: absolute;
+  top: -30px;
+  height: 140%;
+  left: 50%;
+  width: 100%;
+  transform: translateX(-50%);
+  /* left: -45px;
+  width: 106.13%; */
+background-image: url(./assests/foodbackg.jpg);
+background-size: contain;
+  z-index: -1;
+}
+
+@media only screen and (min-width:992px) {
+  .explore-img {
+    width: 70px;
+    mix-blend-mode: darken;
+    animation-name: rotat;
+    animation-play-state: running;
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+    animation-duration: 4s;
+  }
+  @keyframes rotat {
+    to{
+      transform: rotate(360deg);
+    }
+  }
+    .main-logo {
+      width: 150px;
+    }
+}
+
+
+@media  (max-width:991px)  {
+  .main-logo{
+    width: 85px;
+  }
+  .explore-rec{
+    max-width: 100%;
+    gap: 20px;
+    font-size: 10px;
+  }
+    .explore-img {
+      width: 37px;
+    mix-blend-mode: darken;
+      
+    }
+}
+
+@media (max-width:450px) {
+  .main-logo  {
+      width: 65px;
+    }
+  .infoimage{
+width: 270px;
+height: 270px;
+  }
+}
